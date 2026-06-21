@@ -37,7 +37,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
       {/* الصورة رجعت يمين مكانها الأول */}
       <div
-        className={`absolute bottom-0 right-0 lg:right-8 xl:right-16 h-full flex items-end transition-all duration-1000 ${
+        className={`absolute bottom-0 left-0 lg:left-8 xl:right-16 h-full flex items-end transition-all duration-1000 ${
           visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
         }`}
         style={{ transitionDelay: '0.3s', zIndex: 3 }}
@@ -53,7 +53,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
       {/* الكتاب راح شمال مكان الصورة */}
       <div
-        className="absolute bottom-0 left-8 xl:left-16 hidden lg:block pointer-events-none"
+        className="absolute bottom-0 right-8 xl:right-16 hidden lg:block pointer-events-none"
         style={{ zIndex: 2 }}
       >
         <img
