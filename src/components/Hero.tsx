@@ -38,16 +38,15 @@ export default function Hero({ onNavigate }: HeroProps) {
 
   return (
     <section ref={ref} className="relative min-h-screen flex-col justify-between overflow-hidden" style={{ background: '#020817' }}>
-      {/* الخلفية مكتبة */}
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/images/placeholders/library-bg.jpg)' }} />
       <div className="absolute inset-0 bg-black/70" />
 
-      {/* المحتوى الرئيسي */}
+      {/* المحتوى الرئيسي بدون القبعة العائمة */}
       <div className="relative z-10 flex-1 flex items-center">
         <div className="w-full max-w-7xl mx-auto px-6 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
             
-            {/* الأيقونات شمال مع الخط */}
+            {/* الأيقونات شمال */}
             <div className={`space-y-8 transition-all duration-700 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <div className="relative pr-8">
                 <div className="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-gold-500/40 via-gold-500/80 to-gold-500/40" />
@@ -66,7 +65,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               </div>
             </div>
 
-            {/* النص في النص */}
+            {/* النص في النص - شلت الطاقية العائمة من هنا */}
             <div className={`text-center transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="flex justify-center mb-6">
                 <img src="/logo.png" alt="أكاديميتي" className="w-48 h-48 object-contain" style={{ filter: 'drop-shadow(0 0 40px rgba(212,175,55,0.6))' }} />
@@ -78,7 +77,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                 <div className="text-gold-400 text-xs">✦</div>
                 <div className="h-px w-20 bg-gold-500" />
               </div>
-              <p className="text-white/80 text-lg mb-8">معاً نبني إنساناً مصوناً... له مستقبلٌ مضمون.</p>
+              <p className="text-white/80 text-lg mb-8">معاً نبني إنساناً مصوناً... ليبني مستقبلًا مضمونًا.</p>
               <div className="flex flex-row-reverse gap-4 justify-center">
                 <button onClick={() => onNavigate('courses')} className="btn-gold flex items-center gap-2 px-8 py-3 rounded-lg font-semibold">
                   <ArrowLeft size={18} /> ابدأ التعلم
@@ -89,27 +88,17 @@ export default function Hero({ onNavigate }: HeroProps) {
               </div>
             </div>
 
-            {/* صورة المدرس يمين */}
+            {/* صورة المدرس يمين بدون الدايرة الصفراء */}
             <div className={`flex justify-end transition-all duration-1000 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`} style={{ transitionDelay: '0.3s' }}>
               <img src="/images/placeholders/teacher.png" alt="الأستاذ ياسر عادل" className="h-[600px] object-contain drop-shadow-[0_0_50px_rgba(212,175,55,0.3)]" loading="eager" />
             </div>
           </div>
 
-          {/* الكتاب المضيء شمال النص */}
-          <div className="absolute left-1/4 top-1/2 -translate-y-1/2 hidden lg:block">
-            <div className="relative">
-              <img src="/images/placeholders/book-glowing.png" alt="" className="w-80 object-contain animate-pulse" style={{ filter: 'drop-shadow(0 0 60px rgba(212,175,55,0.7))' }} />
-              <div className="absolute -top-20 left-1/2 -translate-x-1/2">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 flex items-center justify-center animate-float">
-                  <div className="text-4xl">🎓</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* شلت الكتاب المضيء والطاقية اللي كانت فوقه */}
         </div>
       </div>
 
-      {/* الكروت الأربعة تحت */}
+      {/* الكروت الأربعة مرة واحدة بس - شلت التكرار */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {bottomCards.map((card) => (
@@ -131,7 +120,7 @@ export default function Hero({ onNavigate }: HeroProps) {
         </div>
       </div>
 
-      {/* الإحصائيات تحت خالص */}
+      {/* الإحصائيات مرة واحدة بس تحت */}
       <div className="relative z-10 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
